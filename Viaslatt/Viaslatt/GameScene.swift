@@ -10,49 +10,73 @@ import SpriteKit
 import GameplayKit
 
 class GameScene: SKScene {
-    var waterTestNode:SKTileMapNode = SKTileMapNode();
+    var worldNode:SKTileMapNode = SKTileMapNode();
     var character:SKSpriteNode = SKSpriteNode();
+    let cam = SKCameraNode();
     let tileSet = SKTileSet(named: "Sample Grid Tile Set")!;
     let tileSize = CGSize(width: 128, height: 128)
     let columns = 128
     let rows = 128
     
-    override func sceneDidLoad() {
+    private var label : SKLabelNode?
+    private var spinnyNode : SKShapeNode?
+    
+    var player = SKSpriteNode();
+    
+    let joystick = AnalogJoystick(diameters: (150, 75), colors: (UIColor.lightGray.withAlphaComponent(0.6), UIColor.gray.withAlphaComponent(0.6)), images: (UIImage(named: "substrate"), UIImage(named: "stick")))
+    
+    func setupJoyStick() {
+        joystick.position = CGPoint(x: UIScreen.main.bounds.width * -0.5, y: UIScreen.main.bounds.height * -0.5)
+        
+        addChild(joystick)
+        
+        joystick.trackingHandler = { [unowned player] data in
+            player.position = CGPoint(x: player.position.x + (data.velocity.x * 0.1), y: player.position.y + (data.velocity.y * 0.1))
+        }
+        
+    }
+    override func didMove(to view: SKView) {
+        self.camera = cam;
+        worldNode = self.childNode(withName: "WorldNode") as! SKTileMapNode;
+        player = SKSpriteNode(color: UIColor.cyan, size: CGSize(width: 90, height: 90));
+        player.anchorPoint = CGPoint(x: 0.5, y: 0.5);
+        player.position = CGPoint(x: 0, y: 0);
+        self.addChild(player)
+        player.addChild(cam);
+        
+        setupJoyStick()
         character.position.x = 0;
         character.position.y = 0;
         character.color = UIColor.red;
-        character.size.height = 50;
-        character.size.width = 50;
-        self.addChild(character);
-        let waterTiles = tileSet.tileGroups.first { $0.name == "Water" }
-        let grassTiles = tileSet.tileGroups.first { $0.name == "Grass"}
-        let sandTiles = tileSet.tileGroups.first { $0.name == "Sand"}
-        
-        let bottomLayer = SKTileMapNode(tileSet: tileSet, columns: columns, rows: rows, tileSize: tileSize)
-        bottomLayer.fill(with: sandTiles)
-        
-        for node in self.children {
-            if node.name == "Water Test" {
-                waterTestNode = node as! SKTileMapNode;
-            }
-        }
-        print(waterTestNode.tileDefinition(atColumn: 4, row: 5));
+        character.size.height = 1000;
+        character.size.width = 1000;
+
+
     }
     
     private func moveCharacterLeft() {
-        var newLocation = CGPoint(x: character.position.x + tileSize.width, y: character.position.y);
+        let newLocation = CGPoint(x: character.position.x + tileSize.width, y: character.position.y);
         SKAction.move(to: newLocation, duration: 0.5);
     }
     
     private func moveCharacterRight() {
-        character.position.x += tileSize.width;
+        let newLocation = CGPoint(x: character.position.x - tileSize.width, y: character.position.y);
+        SKAction.move(to: newLocation, duration: 0.5);
     }
     
     private func moveCharacterUp() {
-        character.position.y += tileSize.height;
+        let newLocation = CGPoint(x: character.position.x, y: character.position.y + tileSize.height);
+        SKAction.move(to: newLocation, duration: 0.5);
     }
     
     private func moveCharacterDown() {
-        character.position.y -= tileSize.height;
+        let newLocation = CGPoint(x: character.position.x, y: character.position.y - tileSize.height);
+        SKAction.move(to: newLocation, duration: 0.5);
     }
+    
+    override func update(_ currentTime: TimeInterval) {
+        joystick.position.x = player.position.x - tileSize.width * 3.5;
+        joystick.position.y = player.position.y - tileSize.height * 1.5;
+    }
+
 }

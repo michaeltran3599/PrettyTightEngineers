@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		F1A8872322DA5E7E00F800FD /* MyTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1A8872222DA5E7E00F800FD /* MyTileSet.sks */; };
-		F1A8872522DA767A00F800FD /* try this.json in Resources */ = {isa = PBXBuildFile; fileRef = F1A8872422DA767A00F800FD /* try this.json */; };
 		F1B603EB22DA4E0B00A5F7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B603EA22DA4E0B00A5F7C6 /* AppDelegate.swift */; };
 		F1B603ED22DA4E0B00A5F7C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1B603EC22DA4E0B00A5F7C6 /* GameScene.sks */; };
 		F1B603EF22DA4E0B00A5F7C6 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1B603EE22DA4E0B00A5F7C6 /* Actions.sks */; };
@@ -19,6 +18,9 @@
 		F1B603FB22DA4E0D00A5F7C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B603F922DA4E0D00A5F7C6 /* LaunchScreen.storyboard */; };
 		F1B6040622DA4E0D00A5F7C6 /* ViaslattTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B6040522DA4E0D00A5F7C6 /* ViaslattTests.swift */; };
 		F1B6041122DA4E0D00A5F7C6 /* ViaslattUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B6041022DA4E0D00A5F7C6 /* ViaslattUITests.swift */; };
+		F1D11F5F22DA7EAB00C0AF89 /* practice.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D11F5E22DA7EAB00C0AF89 /* practice.png */; };
+		F1D11F6122DA807D00C0AF89 /* AnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D11F6022DA807D00C0AF89 /* AnalogJoystick.swift */; };
+		F1D11F6322DA8C5000C0AF89 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D11F6222DA8C5000C0AF89 /* image.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +42,6 @@
 
 /* Begin PBXFileReference section */
 		F1A8872222DA5E7E00F800FD /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyTileSet.sks; sourceTree = "<group>"; };
-		F1A8872422DA767A00F800FD /* try this.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "try this.json"; sourceTree = "<group>"; };
 		F1B603E722DA4E0B00A5F7C6 /* Viaslatt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viaslatt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B603EA22DA4E0B00A5F7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F1B603EC22DA4E0B00A5F7C6 /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -57,6 +58,9 @@
 		F1B6040C22DA4E0D00A5F7C6 /* ViaslattUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViaslattUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B6041022DA4E0D00A5F7C6 /* ViaslattUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaslattUITests.swift; sourceTree = "<group>"; };
 		F1B6041222DA4E0D00A5F7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F1D11F5E22DA7EAB00C0AF89 /* practice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = practice.png; sourceTree = "<group>"; };
+		F1D11F6022DA807D00C0AF89 /* AnalogJoystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogJoystick.swift; sourceTree = "<group>"; };
+		F1D11F6222DA8C5000C0AF89 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,9 +114,11 @@
 				F1B603EA22DA4E0B00A5F7C6 /* AppDelegate.swift */,
 				F1B603EC22DA4E0B00A5F7C6 /* GameScene.sks */,
 				F1A8872222DA5E7E00F800FD /* MyTileSet.sks */,
-				F1A8872422DA767A00F800FD /* try this.json */,
 				F1B603EE22DA4E0B00A5F7C6 /* Actions.sks */,
+				F1D11F5E22DA7EAB00C0AF89 /* practice.png */,
+				F1D11F6222DA8C5000C0AF89 /* image.png */,
 				F1B603F022DA4E0B00A5F7C6 /* GameScene.swift */,
+				F1D11F6022DA807D00C0AF89 /* AnalogJoystick.swift */,
 				F1B603F222DA4E0B00A5F7C6 /* GameViewController.swift */,
 				F1B603F422DA4E0B00A5F7C6 /* Main.storyboard */,
 				F1B603F722DA4E0D00A5F7C6 /* Assets.xcassets */,
@@ -244,13 +250,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1A8872522DA767A00F800FD /* try this.json in Resources */,
 				F1A8872322DA5E7E00F800FD /* MyTileSet.sks in Resources */,
 				F1B603F622DA4E0B00A5F7C6 /* Main.storyboard in Resources */,
+				F1D11F5F22DA7EAB00C0AF89 /* practice.png in Resources */,
 				F1B603ED22DA4E0B00A5F7C6 /* GameScene.sks in Resources */,
 				F1B603F822DA4E0D00A5F7C6 /* Assets.xcassets in Resources */,
 				F1B603FB22DA4E0D00A5F7C6 /* LaunchScreen.storyboard in Resources */,
 				F1B603EF22DA4E0B00A5F7C6 /* Actions.sks in Resources */,
+				F1D11F6322DA8C5000C0AF89 /* image.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +283,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F1B603F122DA4E0B00A5F7C6 /* GameScene.swift in Sources */,
+				F1D11F6122DA807D00C0AF89 /* AnalogJoystick.swift in Sources */,
 				F1B603F322DA4E0B00A5F7C6 /* GameViewController.swift in Sources */,
 				F1B603EB22DA4E0B00A5F7C6 /* AppDelegate.swift in Sources */,
 			);
