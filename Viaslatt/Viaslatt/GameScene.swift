@@ -41,7 +41,7 @@ class GameScene: SKScene {
     
     private func moveCharacterLeft() {
         var newLocation = CGPoint(x: character.position.x + tileSize.width, y: character.position.y);
-        SKAction.move(to: newLocation, duration: 0.5s);
+        SKAction.move(to: newLocation, duration: 0.5);
     }
     
     private func moveCharacterRight() {
@@ -55,6 +55,4 @@ class GameScene: SKScene {
     private func moveCharacterDown() {
         character.position.y -= tileSize.height;
     }
-    
-    keydown
 }
