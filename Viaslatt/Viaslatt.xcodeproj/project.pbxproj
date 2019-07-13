@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E43158F722DA9B6C001791F4 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43158F622DA9B6C001791F4 /* QRScannerController.swift */; };
 		F1A8872322DA5E7E00F800FD /* MyTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1A8872222DA5E7E00F800FD /* MyTileSet.sks */; };
 		F1B603EB22DA4E0B00A5F7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B603EA22DA4E0B00A5F7C6 /* AppDelegate.swift */; };
 		F1B603ED22DA4E0B00A5F7C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1B603EC22DA4E0B00A5F7C6 /* GameScene.sks */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E43158F622DA9B6C001791F4 /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
 		F1A8872222DA5E7E00F800FD /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyTileSet.sks; sourceTree = "<group>"; };
 		F1B603E722DA4E0B00A5F7C6 /* Viaslatt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viaslatt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B603EA22DA4E0B00A5F7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				F1B603F722DA4E0D00A5F7C6 /* Assets.xcassets */,
 				F1B603F922DA4E0D00A5F7C6 /* LaunchScreen.storyboard */,
 				F1B603FC22DA4E0D00A5F7C6 /* Info.plist */,
+				E43158F622DA9B6C001791F4 /* QRScannerController.swift */,
 			);
 			path = Viaslatt;
 			sourceTree = "<group>";
@@ -284,6 +287,7 @@
 			files = (
 				F1B603F122DA4E0B00A5F7C6 /* GameScene.swift in Sources */,
 				F1D11F6122DA807D00C0AF89 /* AnalogJoystick.swift in Sources */,
+				E43158F722DA9B6C001791F4 /* QRScannerController.swift in Sources */,
 				F1B603F322DA4E0B00A5F7C6 /* GameViewController.swift in Sources */,
 				F1B603EB22DA4E0B00A5F7C6 /* AppDelegate.swift in Sources */,
 			);
