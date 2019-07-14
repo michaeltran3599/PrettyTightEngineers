@@ -125,7 +125,7 @@ class QRScannerController: UIViewController {
 //                if UIApplication.shared.canOpenURL(url) {
 //                    UIApplication.shared.open(url)
 //                }
-                self.performSegue(withIdentifier: "GoBackToGame", sender: nil)
+                self.performSegue(withIdentifier: "EndingScene", sender: nil)
             }
         })
         

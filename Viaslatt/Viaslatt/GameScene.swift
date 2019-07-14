@@ -28,7 +28,6 @@ class GameScene: SKScene {
     
     func setupJoyStick() {
         joystick.position = CGPoint(x: UIScreen.main.bounds.width * -0.5, y: UIScreen.main.bounds.height * -0.5)
-        
         addChild(joystick)
         
         joystick.trackingHandler = { [unowned player] data in
@@ -45,6 +44,30 @@ class GameScene: SKScene {
         player.anchorPoint = CGPoint(x: 0.5, y: 0.5);
         player.position = CGPoint(x: 0, y: 0);
         self.addChild(player)
+        
+        // get the scene size as scaled by `scaleMode = .AspectFill`
+        let scaledSize = CGSize(width: size.width * cam.xScale, height: size.height * cam.yScale)
+        
+        // get the frame of the entire level contents
+        let boardContentRect = worldNode.calculateAccumulatedFrame()
+        
+        // inset that frame from the edges of the level
+        // inset by `scaledSize / 2 - 100` to show 100 pt of black around the level
+        // (no need for `- 100` if you want zero padding)
+        // use min() to make sure we don't inset too far if the level is small
+        let xInset = min((scaledSize.width / 2) - 100.0, boardContentRect.width / 2)
+        let yInset = min((scaledSize.height / 2) - 100.0, boardContentRect.height / 2)
+        let insetContentRect = boardContentRect.insetBy(dx: xInset, dy: yInset)
+        
+        // use the corners of the inset as the X and Y range of a position constraint
+        let xRange = SKRange(lowerLimit: insetContentRect.minX + 1700, upperLimit: insetContentRect.maxX + 1000)
+        let yRange = SKRange(lowerLimit: insetContentRect.minY + 1000, upperLimit: insetContentRect.maxY + 1000)
+        let levelEdgeConstraint = SKConstraint.positionX(xRange, y: yRange)
+        levelEdgeConstraint.referenceNode = worldNode
+        let zeroRange = SKRange(constantValue: 0.0)
+        let playerBotLocationConstraint = SKConstraint.distance(zeroRange, to: player.position)
+        cam.constraints = [playerBotLocationConstraint, levelEdgeConstraint]
+
         player.addChild(cam);
         setupJoyStick()
     }
@@ -70,10 +93,9 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        let playerX = player.position.x
-        let playerY = player.position.y
-        joystick.position.x = playerX - tileSize.width * 3.5;
-        joystick.position.y = playerY - tileSize.height * 1.5;
+        let playerX = player.position.x;
+        let playerY = player.position.y;
+
         let angle = joystick.data.angular
         if angle != 0 {
             self.camera!.zRotation = -angle - .pi / 2;
@@ -83,7 +105,9 @@ class GameScene: SKScene {
         if (playerX > -300 && playerX < 300 && playerY > 350 && playerY < 950) {
             self.button.isHidden = false;
         }
-                
+        joystick.position.x = player.position.x - 350;
+        joystick.position.y = player.position.y - 225;
+
     }
 
 }

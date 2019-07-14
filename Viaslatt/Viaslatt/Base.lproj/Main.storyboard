@@ -94,11 +94,36 @@
                     <connections>
                         <outlet property="messageLabel" destination="wqC-sv-aSd" id="CYo-so-VoN"/>
                         <outlet property="topbar" destination="orJ-4u-YTm" id="ZgO-ZM-tia"/>
+                        <segue destination="cTc-Js-kTj" kind="showDetail" identifier="EndingScene" id="bag-3P-7Cs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2c-mp-fVU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="937.68115942028987" y="91.741071428571431"/>
+        </scene>
+        <!--Ending View Controller-->
+        <scene sceneID="caf-wl-qoO">
+            <objects>
+                <viewController id="cTc-Js-kTj" customClass="EndingViewController" customModule="Viaslatt" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="gdP-ou-mVB">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cp6-KN-vy8">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="vcZ-QC-v5U"/>
+                    </view>
+                    <connections>
+                        <outlet property="endingScene" destination="cp6-KN-vy8" id="sD3-M7-IpQ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3UP-wn-zkN" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1671.0144927536232" y="93.75"/>
         </scene>
     </scenes>
     <resources>
