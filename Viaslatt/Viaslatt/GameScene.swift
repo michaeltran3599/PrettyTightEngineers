@@ -34,13 +34,6 @@ class GameScene: SKScene {
         joystick.trackingHandler = { [unowned player] data in
             player.position = CGPoint(x: player.position.x + (data.velocity.x * 0.1), y: player.position.y + (data.velocity.y * 0.1))
             
-//            player.zRotation = data.angular
-//            self.player.run(SKAction.rotate(byAngle: 3.6, duration: 0.5))
-
-//            player.zRotation = -atan2(player.position.x, player.position.y) - CGFloat(Double.pi/2)
-
-//            let angle = atan2(player.position.y, player.position.x)
-//            player.zRotation = angle - CGFloat(Double.pi/2)
         }
         
     }
@@ -90,7 +83,7 @@ class GameScene: SKScene {
         if (playerX > -300 && playerX < 300 && playerY > 350 && playerY < 950) {
             self.button.isHidden = false;
         }
-        
+                
     }
 
 }
