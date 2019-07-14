@@ -22,6 +22,7 @@ class GameScene: SKScene {
     private var spinnyNode : SKShapeNode?
     
     var player = SKSpriteNode();
+    var button = ScannerButton();
     
     let joystick = AnalogJoystick(diameters: (150, 75), colors: (UIColor.lightGray.withAlphaComponent(0.6), UIColor.gray.withAlphaComponent(0.6)), images: (UIImage(named: "substrate"), UIImage(named: "stick")))
     
@@ -31,7 +32,7 @@ class GameScene: SKScene {
         addChild(joystick)
         
         joystick.trackingHandler = { [unowned player] data in
-            player.position = CGPoint(x: player.position.x + (data.velocity.x * 0.2), y: player.position.y + (data.velocity.y * 0.2))
+            player.position = CGPoint(x: player.position.x + (data.velocity.x * 0.1), y: player.position.y + (data.velocity.y * 0.1))
             
 //            player.zRotation = data.angular
 //            self.player.run(SKAction.rotate(byAngle: 3.6, duration: 0.5))
@@ -45,16 +46,14 @@ class GameScene: SKScene {
     }
     override func didMove(to view: SKView) {
         self.camera = cam;
+        self.addChild(self.button);
         worldNode = self.childNode(withName: "WorldNode") as! SKTileMapNode;
         player = SKSpriteNode(imageNamed: "manBlue_hold");
         player.anchorPoint = CGPoint(x: 0.5, y: 0.5);
         player.position = CGPoint(x: 0, y: 0);
         self.addChild(player)
         player.addChild(cam);
-        
         setupJoyStick()
-
-
     }
     
     private func moveCharacterLeft() {
@@ -78,14 +77,19 @@ class GameScene: SKScene {
     }
     
     override func update(_ currentTime: TimeInterval) {
-        joystick.position.x = player.position.x - tileSize.width * 3.5;
-        joystick.position.y = player.position.y - tileSize.height * 1.5;
+        let playerX = player.position.x
+        let playerY = player.position.y
+        joystick.position.x = playerX - tileSize.width * 3.5;
+        joystick.position.y = playerY - tileSize.height * 1.5;
         let angle = joystick.data.angular
         if angle != 0 {
             self.camera!.zRotation = -angle - .pi / 2;
             self.player.zRotation = angle + .pi / 2;
         }
-        print(self.player.position)
+        self.button.isHidden = true;
+        if (playerX > -300 && playerX < 300 && playerY > 350 && playerY < 950) {
+            self.button.isHidden = false;
+        }
         
     }
 
