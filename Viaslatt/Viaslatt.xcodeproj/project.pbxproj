@@ -19,7 +19,6 @@
 		F1B603FB22DA4E0D00A5F7C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F1B603F922DA4E0D00A5F7C6 /* LaunchScreen.storyboard */; };
 		F1B6040622DA4E0D00A5F7C6 /* ViaslattTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B6040522DA4E0D00A5F7C6 /* ViaslattTests.swift */; };
 		F1B6041122DA4E0D00A5F7C6 /* ViaslattUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B6041022DA4E0D00A5F7C6 /* ViaslattUITests.swift */; };
-		F1D11F5F22DA7EAB00C0AF89 /* practice.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D11F5E22DA7EAB00C0AF89 /* practice.png */; };
 		F1D11F6122DA807D00C0AF89 /* AnalogJoystick.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1D11F6022DA807D00C0AF89 /* AnalogJoystick.swift */; };
 		F1D11F6322DA8C5000C0AF89 /* image.png in Resources */ = {isa = PBXBuildFile; fileRef = F1D11F6222DA8C5000C0AF89 /* image.png */; };
 /* End PBXBuildFile section */
@@ -60,7 +59,6 @@
 		F1B6040C22DA4E0D00A5F7C6 /* ViaslattUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ViaslattUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B6041022DA4E0D00A5F7C6 /* ViaslattUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViaslattUITests.swift; sourceTree = "<group>"; };
 		F1B6041222DA4E0D00A5F7C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F1D11F5E22DA7EAB00C0AF89 /* practice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = practice.png; sourceTree = "<group>"; };
 		F1D11F6022DA807D00C0AF89 /* AnalogJoystick.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalogJoystick.swift; sourceTree = "<group>"; };
 		F1D11F6222DA8C5000C0AF89 /* image.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = image.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -117,7 +115,6 @@
 				F1B603EC22DA4E0B00A5F7C6 /* GameScene.sks */,
 				F1A8872222DA5E7E00F800FD /* MyTileSet.sks */,
 				F1B603EE22DA4E0B00A5F7C6 /* Actions.sks */,
-				F1D11F5E22DA7EAB00C0AF89 /* practice.png */,
 				F1D11F6222DA8C5000C0AF89 /* image.png */,
 				F1B603F022DA4E0B00A5F7C6 /* GameScene.swift */,
 				F1D11F6022DA807D00C0AF89 /* AnalogJoystick.swift */,
@@ -255,7 +252,6 @@
 			files = (
 				F1A8872322DA5E7E00F800FD /* MyTileSet.sks in Resources */,
 				F1B603F622DA4E0B00A5F7C6 /* Main.storyboard in Resources */,
-				F1D11F5F22DA7EAB00C0AF89 /* practice.png in Resources */,
 				F1B603ED22DA4E0B00A5F7C6 /* GameScene.sks in Resources */,
 				F1B603F822DA4E0D00A5F7C6 /* Assets.xcassets in Resources */,
 				F1B603FB22DA4E0D00A5F7C6 /* LaunchScreen.storyboard in Resources */,
