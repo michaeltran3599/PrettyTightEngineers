@@ -32,24 +32,27 @@ class GameScene: SKScene {
         
         joystick.trackingHandler = { [unowned player] data in
             player.position = CGPoint(x: player.position.x + (data.velocity.x * 0.1), y: player.position.y + (data.velocity.y * 0.1))
+            
+//            player.zRotation = data.angular
+//            self.player.run(SKAction.rotate(byAngle: 3.6, duration: 0.5))
+
+//            player.zRotation = -atan2(player.position.x, player.position.y) - CGFloat(Double.pi/2)
+
+//            let angle = atan2(player.position.y, player.position.x)
+//            player.zRotation = angle - CGFloat(Double.pi/2)
         }
         
     }
     override func didMove(to view: SKView) {
         self.camera = cam;
         worldNode = self.childNode(withName: "WorldNode") as! SKTileMapNode;
-        player = SKSpriteNode(color: UIColor.cyan, size: CGSize(width: 90, height: 90));
+        player = SKSpriteNode(imageNamed: "manBlue_hold");
         player.anchorPoint = CGPoint(x: 0.5, y: 0.5);
         player.position = CGPoint(x: 0, y: 0);
         self.addChild(player)
         player.addChild(cam);
         
         setupJoyStick()
-        character.position.x = 0;
-        character.position.y = 0;
-        character.color = UIColor.red;
-        character.size.height = 1000;
-        character.size.width = 1000;
 
 
     }
