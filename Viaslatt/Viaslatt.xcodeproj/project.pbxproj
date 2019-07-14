@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E43158F722DA9B6C001791F4 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43158F622DA9B6C001791F4 /* QRScannerController.swift */; };
+		F12D0C8722DAA576008626B1 /* ground.png in Resources */ = {isa = PBXBuildFile; fileRef = F12D0C8622DAA576008626B1 /* ground.png */; };
+		F12D0C8922DAD81B008626B1 /* Tiles in Resources */ = {isa = PBXBuildFile; fileRef = F12D0C8822DAD81B008626B1 /* Tiles */; };
 		F1A8872322DA5E7E00F800FD /* MyTileSet.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1A8872222DA5E7E00F800FD /* MyTileSet.sks */; };
 		F1B603EB22DA4E0B00A5F7C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1B603EA22DA4E0B00A5F7C6 /* AppDelegate.swift */; };
 		F1B603ED22DA4E0B00A5F7C6 /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = F1B603EC22DA4E0B00A5F7C6 /* GameScene.sks */; };
@@ -43,6 +45,8 @@
 
 /* Begin PBXFileReference section */
 		E43158F622DA9B6C001791F4 /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
+		F12D0C8622DAA576008626B1 /* ground.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ground.png; sourceTree = "<group>"; };
+		F12D0C8822DAD81B008626B1 /* Tiles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Tiles; sourceTree = "<group>"; };
 		F1A8872222DA5E7E00F800FD /* MyTileSet.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyTileSet.sks; sourceTree = "<group>"; };
 		F1B603E722DA4E0B00A5F7C6 /* Viaslatt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Viaslatt.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F1B603EA22DA4E0B00A5F7C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -116,6 +120,8 @@
 				F1B603EA22DA4E0B00A5F7C6 /* AppDelegate.swift */,
 				F1B603EC22DA4E0B00A5F7C6 /* GameScene.sks */,
 				F1A8872222DA5E7E00F800FD /* MyTileSet.sks */,
+				F12D0C8822DAD81B008626B1 /* Tiles */,
+				F12D0C8622DAA576008626B1 /* ground.png */,
 				F1B603EE22DA4E0B00A5F7C6 /* Actions.sks */,
 				F1D11F5E22DA7EAB00C0AF89 /* practice.png */,
 				F1D11F6222DA8C5000C0AF89 /* image.png */,
@@ -253,9 +259,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F12D0C8722DAA576008626B1 /* ground.png in Resources */,
 				F1A8872322DA5E7E00F800FD /* MyTileSet.sks in Resources */,
 				F1B603F622DA4E0B00A5F7C6 /* Main.storyboard in Resources */,
 				F1D11F5F22DA7EAB00C0AF89 /* practice.png in Resources */,
+				F12D0C8922DAD81B008626B1 /* Tiles in Resources */,
 				F1B603ED22DA4E0B00A5F7C6 /* GameScene.sks in Resources */,
 				F1B603F822DA4E0D00A5F7C6 /* Assets.xcassets in Resources */,
 				F1B603FB22DA4E0D00A5F7C6 /* LaunchScreen.storyboard in Resources */,
