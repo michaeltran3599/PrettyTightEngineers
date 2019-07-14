@@ -8,8 +8,21 @@
 
 import UIKit
 import AVFoundation
+import SpriteKit
+import GameplayKit
 
 class QRScannerController: UIViewController {
+    override var shouldAutorotate: Bool {
+        return true
+    }
+    
+    override var supportedInterfaceOrientations: UIInterfaceOrientationMask {
+        return .portrait
+    }
+    
+    override var prefersStatusBarHidden: Bool {
+        return true
+    }
     
     @IBOutlet var messageLabel:UILabel!
     @IBOutlet var topbar: UIView!
@@ -35,6 +48,8 @@ class QRScannerController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let newvalue = UIInterfaceOrientation.portrait.rawValue
+        UIDevice.current.setValue(newvalue, forKey: "orientation")
         
         // Get the back-facing camera for capturing videos
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInDualCamera], mediaType: AVMediaType.video, position: .back)
@@ -103,13 +118,14 @@ class QRScannerController: UIViewController {
             return
         }
         
-        let alertPrompt = UIAlertController(title: "Open App", message: "You're going to open \(decodedURL)", preferredStyle: .actionSheet)
+        let alertPrompt = UIAlertController(title: "Open App", message: "You have successfully found the landmark! Please proceed with the game!", preferredStyle: .actionSheet)
         let confirmAction = UIAlertAction(title: "Confirm", style: UIAlertAction.Style.default, handler: { (action) -> Void in
             
             if let url = URL(string: decodedURL) {
-                if UIApplication.shared.canOpenURL(url) {
-                    UIApplication.shared.open(url)
-                }
+//                if UIApplication.shared.canOpenURL(url) {
+//                    UIApplication.shared.open(url)
+//                }
+                self.performSegue(withIdentifier: "GoBackToGame", sender: nil)
             }
         })
         
