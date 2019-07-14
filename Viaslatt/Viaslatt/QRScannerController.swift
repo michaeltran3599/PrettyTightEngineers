@@ -133,7 +133,6 @@ class QRScannerController: UIViewController {
         
         alertPrompt.addAction(confirmAction)
         alertPrompt.addAction(cancelAction)
-        
         present(alertPrompt, animated: true, completion: nil)
     }
     

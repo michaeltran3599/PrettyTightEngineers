@@ -15,7 +15,8 @@ class EndingViewController: UIViewController {
         super.viewDidLoad()
         let value = UIInterfaceOrientation.landscapeLeft.rawValue
         UIDevice.current.setValue(value, forKey: "orientation")
-        endingScene.loadGif(name: "safe_image.gif");
+        endingScene.image = UIImage.gif(name: "final_ending")
+
     }
     
 

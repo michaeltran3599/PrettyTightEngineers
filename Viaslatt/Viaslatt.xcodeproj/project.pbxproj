@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		E43158F722DA9B6C001791F4 /* QRScannerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43158F622DA9B6C001791F4 /* QRScannerController.swift */; };
+		E4E526D022DBDC5B007E0960 /* pixil-gif-drawing.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4E526CF22DBDC5B007E0960 /* pixil-gif-drawing.gif */; };
+		E4E526D222DBDFED007E0960 /* final_ending.gif in Resources */ = {isa = PBXBuildFile; fileRef = E4E526D122DBDFED007E0960 /* final_ending.gif */; };
 		F11738FA22DBBB6800364954 /* ScannerButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11738F922DBBB6800364954 /* ScannerButton.swift */; };
 		F11738FC22DBC84000364954 /* QRCodeScan.png in Resources */ = {isa = PBXBuildFile; fileRef = F11738FB22DBC84000364954 /* QRCodeScan.png */; };
 		F11738FE22DBD7F500364954 /* EndingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F11738FD22DBD7F500364954 /* EndingViewController.swift */; };
@@ -50,6 +52,8 @@
 
 /* Begin PBXFileReference section */
 		E43158F622DA9B6C001791F4 /* QRScannerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRScannerController.swift; sourceTree = "<group>"; };
+		E4E526CF22DBDC5B007E0960 /* pixil-gif-drawing.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "pixil-gif-drawing.gif"; sourceTree = "<group>"; };
+		E4E526D122DBDFED007E0960 /* final_ending.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = final_ending.gif; sourceTree = "<group>"; };
 		F11738F922DBBB6800364954 /* ScannerButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScannerButton.swift; sourceTree = "<group>"; };
 		F11738FB22DBC84000364954 /* QRCodeScan.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = QRCodeScan.png; sourceTree = "<group>"; };
 		F11738FD22DBD7F500364954 /* EndingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndingViewController.swift; sourceTree = "<group>"; };
@@ -141,6 +145,8 @@
 				F1D11F6022DA807D00C0AF89 /* AnalogJoystick.swift */,
 				F1B603F222DA4E0B00A5F7C6 /* GameViewController.swift */,
 				F11738FD22DBD7F500364954 /* EndingViewController.swift */,
+				E4E526D122DBDFED007E0960 /* final_ending.gif */,
+				E4E526CF22DBDC5B007E0960 /* pixil-gif-drawing.gif */,
 				F117390122DBD95700364954 /* safe_image.gif */,
 				F11738FF22DBD8E700364954 /* SwiftGif.swift */,
 				F1B603F422DA4E0B00A5F7C6 /* Main.storyboard */,
@@ -274,6 +280,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4E526D222DBDFED007E0960 /* final_ending.gif in Resources */,
+				E4E526D022DBDC5B007E0960 /* pixil-gif-drawing.gif in Resources */,
 				F12D0C8722DAA576008626B1 /* ground.png in Resources */,
 				F1A8872322DA5E7E00F800FD /* MyTileSet.sks in Resources */,
 				F1B603F622DA4E0B00A5F7C6 /* Main.storyboard in Resources */,
